@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+h3{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+
+input:focus{
+    border: unset;
+    border-radius: 0px;
+    outline: unset;
+}
+
+button:focus{
+    border: unset;
+    outline: unset;
+}
+
+::placeholder{
+    color: white;
+}
+
+.col-1{
+    max-width: calc(100%/12 * 1);
+    display: flex;
+    width: 100%;
+}
+.col-2{
+    max-width: calc(100%/12 * 2);
+    display: flex;
+    width: 100%;
+}
+.col-3{
+    max-width: calc(100%/12 * 3);
+    display: flex;
+    width: 100%;
+}
+.col-4{
+    max-width: calc(100%/12 * 4);
+    display: flex;
+    width: 100%;
+}
+.col-5{
+    max-width: calc(100%/12 * 5);
+    display: flex;
+    width: 100%;
+}
+.col-6{
+    max-width: calc(100%/12 * 6);
+    display: flex;
+    width: 100%;
+}
+.col-7{
+    max-width: calc(100%/12 * 7);
+    display: flex;
+    width: 100%;
+}
+.col-8{
+    max-width: calc(100%/12 * 8);
+    display: flex;
+    width: 100%;
+}
+.col-9{
+    max-width: calc(100%/12 * 9);
+    display: flex;
+    width: 100%;
+}
+.col-10{
+    max-width: calc(100%/12 * 10);
+    display: flex;
+    width: 100%;
+}
+.col-11{
+    max-width: calc(100%/12 * 11);
+    display: flex;
+    width: 100%;
+}
+.col-12{
+    max-width: calc(100%/12 * 12);
+    display: flex;
+    width: 100%;
+}

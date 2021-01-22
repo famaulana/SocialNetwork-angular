@@ -1,0 +1,28 @@
+<a href="">
+    <div class="row">
+        <div class="col-3">
+            <ng-container *ngIf="images != null; else elseTemplate">
+                <img src="{{images}}" alt="">
+            </ng-container>
+            <ng-template #elseTemplate>
+                <div class="img-dummy"></div>
+            </ng-template>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <h4 class="name">{{item['creator']}}</h4>
+                <p class="type" *ngIf="item['action'] == 'comment'">commented</p>
+                <p class="type" *ngIf="item['action'] == 'uploadVideo'">added a new video</p>
+                <p class="type" *ngIf="item['action'] == 'shareDocument'">shared a document</p>
+                <p class="type" *ngIf="item['action'] == 'achivement'">unlocked new badge</p>
+                <p class="type" *ngIf="item['action'] == 'likeVideo'">liked new video</p>
+            </div>
+            <p class="spoiler">{{item['messages']}}</p>
+            <p *ngIf="item['action'] == 'comment'"><mat-icon >mode_comment</mat-icon>{{item['update_at']}} ago</p>
+            <p *ngIf="item['action'] == 'uploadVideo'"><mat-icon >video_call</mat-icon>{{item['update_at']}} ago</p>
+            <p *ngIf="item['action'] == 'shareDocument'"><mat-icon >text_snippet</mat-icon>{{item['update_at']}} ago</p>
+            <p *ngIf="item['action'] == 'achivement'"><mat-icon >lock_open</mat-icon>{{item['update_at']}} ago</p>
+            <p *ngIf="item['action'] == 'likeVideo'"><mat-icon >favorite</mat-icon>{{item['update_at']}} ago</p>
+        </div>
+    </div>
+</a>

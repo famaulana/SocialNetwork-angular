@@ -1,0 +1,46 @@
+:host{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+h3{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+a{
+    height: fit-content;
+    align-self: center;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.border-bottom{
+    border-bottom: 3px solid #3a3a3a;
+}
+
+.row{
+    border-bottom: 2px solid #3a3a3a;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+app-card-channels{
+    height: 100px;
+}
+
+.container-item{
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.item{
+    float: left;
+}

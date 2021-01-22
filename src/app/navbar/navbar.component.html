@@ -1,0 +1,31 @@
+<div class="col-3 title">
+    <h3 class="website-title"><b>Social</b>Network</h3>
+</div>
+<div class="col-5 search">
+    <div class="search-form">
+        <input type="text" name="search-input" id="search-input" class="search-input" placeholder="Find...">
+        <button aria-label="Search" class="form-icon" matSuffix>
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+</div>
+<div class="col-2 upload">
+    <button type="button" class="primary btn-upload" ><mat-icon matPrefix>arrow_upward</mat-icon>Upload</button>
+</div>
+<div class="col-2 profile">
+    <div class="col-4 profile-photo">
+        <ng-container *ngIf="profilePhoto == null; else elseTemplate">
+            <mat-icon class="profile-pict">perm_identity_rounded</mat-icon>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <img src="{{profilePhoto}}" class="profile-pict" alt="">
+        </ng-template>
+    </div>
+    <div class="col-8 profile-name">
+        <div class="col-12"><b>Waseem</b></div>
+        <div class="col-12">Arshad</div>
+    </div>
+    <div class="settings">
+        <mat-icon>loop</mat-icon>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="col-8">
+    <div class="col-6">
+        <h3 *ngIf="datas[0] != null">{{datas[0].titleComponent}}</h3>
+    </div>
+    <div class="col-3" style="justify-content: flex-end;">
+        <a href="" *ngIf="datas[0] != null">{{datas[0].overviewButtons}}</a>
+    </div>
+</div>
+<div class="col-12 container-item">
+    <div class="item" *ngFor="let data of datas[1]">
+        <div class="copy-text">
+            <ng-container *ngIf="datas[0].titleComponent == 'videos'">
+            
+                <h3><a href="">{{data.title}}</a></h3>
+                <h4><a href="">{{data.subtitle}}</a></h4>
+                <p>{{data.views}} views</p>
+                
+            </ng-container>
+            <ng-container *ngIf="datas[0].titleComponent == 'document'">
+            
+                <h3 *ngIf="datas[1][0].title != data.title"><a href="">{{data.subtitle}}</a></h3>
+                <h3 *ngIf="datas[1][0].title == data.title"><a href="">{{data.title}}</a></h3>
+                <h4 *ngIf="datas[1][0].title != data.title"><a href="">{{data.title}}</a></h4>
+                <h4 *ngIf="datas[1][0].title == data.title"><a href="">{{data.subtitle}}</a></h4>
+                <p>{{data.views}} views</p>
+                
+            </ng-container>
+            <ng-container *ngIf="datas[0].titleComponent == 'people'">
+                
+                <h3><a href="">{{data.subtitle}}</a></h3>
+                <h4><a href="">{{data.title}}</a></h4>
+                <p>{{data.views}} views</p>
+
+            </ng-container>
+        </div>
+    </div>
+    <div class="item">
+        <mat-icon *ngIf="datas[0].titleComponent == 'videos'">arrow_upward</mat-icon>
+        <mat-icon *ngIf="datas[0].titleComponent == 'people'">album</mat-icon>
+        <mat-icon *ngIf="datas[0].titleComponent == 'document'">add</mat-icon>
+        <a href="" *ngIf="datas[0].titleComponent == 'videos'">Upload<br> Your Own Video</a>
+        <a href="" *ngIf="datas[0].titleComponent == 'people'">Show<br> Your Work</a>
+        <a href="" *ngIf="datas[0].titleComponent == 'document'">Share<br> Your Document</a>
+    </div>
+</div>
